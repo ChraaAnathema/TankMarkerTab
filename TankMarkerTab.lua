@@ -51,7 +51,11 @@ button:SetScript("OnLoad",
 		button:RegisterForClicks("AnyUp")
 	end 
 )
-button:SetScript("OnClick", TMTDeactivate)
+button:SetScript("OnClick", 
+	function()
+		TMTDeactivate()
+	end
+)
 
 --scbTexture:SetTexCoord(0, 0.25, 0, 0.25); -- Star
 --scbTexture:SetTexCoord(0.25, 0.5, 0, 0.25); -- Circle
